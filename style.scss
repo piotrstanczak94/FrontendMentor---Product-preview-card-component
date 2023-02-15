@@ -17,27 +17,121 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	font-size: 62.5%;
 	background-color: $cream;
 	height: 100vh;
 }
 
 .box {
+	background-color: $white;
+	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
-	background-color: $white;
-	width: 400px;
+	align-items: center;
+	width: 80%;
+	max-width: 500px;
+	overflow: hidden;
 	&__img {
 		width: 100%;
-		background-size: cover;
+		margin-bottom: 5%;
+	}
+	&__text {
+		padding: 5%;
+		h2 {
+			text-transform: uppercase;
+			color: $darkGrayishBlue;
+			font-weight: 500;
+			font-family: 'Montserrat', sans-serif;
+			margin-bottom: 5%;
+		}
+		h1 {
+			font-family: 'Fraunces', serif;
+			font-size: 1.5rem;
+			margin-bottom: 5%;
+		}
+		p {
+			color: $darkGrayishBlue;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 0.8rem;
+		}
+	}
+	&__price {
+		display: flex;
+		margin-top: 5%;
+		align-items: center;
+		&__promo {
+			font-family: 'Fraunces', serif;
+			font-size: 1.5rem;
+			color: $darkCyan;
+		}
+		&__normal {
+			font-size: 1rem;
+			color: $darkGrayishBlue;
+			margin-left: 10%;
+			text-decoration: line-through;
+		}
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 5%;
+		width: 80%;
+		padding: 5% 10%;
+		background-color: $darkCyan;
+		border: none;
+		border-radius: 10px;
+		span {
+			color: $white;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+			margin-left: 5%;
+		}
 	}
 }
 
 .attribution {
+	max-width: 80%;
 	font-size: 11px;
+	font-family: 'Montserrat', sans-serif;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+//MEDIA QUERIES
+
+@media (min-width: 768px) {
+	.box__img {
+		margin-bottom: 1%;
+	}
+	.box__text h2 {
+		font-size: 1.5rem;
+	}
+	.box__text h1 {
+		font-size: 2rem;
+	}
+	.box__button {
+		font-size: 1rem;
+	}
+	.box__price__promo {
+		font-size: 2rem;
+	}
+	.box__price__normal {
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 922px) {
+	.box {
+		flex-direction: row;
+	}
+	.box__img {
+		width: 50%;
+		height: 100%;
+	}
 }
