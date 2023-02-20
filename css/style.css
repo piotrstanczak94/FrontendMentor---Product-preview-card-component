@@ -38,7 +38,7 @@ body {
   width: 60vw;
   max-width: 800px;
   height: 80vh;
-  max-height: 600px;
+  max-height: 700px;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 15px;
   overflow: hidden;
@@ -85,11 +85,12 @@ body {
 }
 .wrapper__text .description {
   color: hsl(228deg, 12%, 48%);
+  line-height: 150%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
 }
 .wrapper__price {
-  margin: 2em 0 1em;
+  margin: 1em 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -137,6 +138,7 @@ body {
     padding-bottom: 3em;
   }
   .wrapper__text .heading-two {
+    margin-top: 1em;
     font-size: 1.3rem;
   }
   .wrapper__text .heading-one {
@@ -169,16 +171,31 @@ body {
     height: 100%;
     background-image: url(../images/image-product-desktop.jpg);
   }
-  .wrapper__price-promo {
+  .wrapper__text .heading-two {
+    margin-bottom: 1em;
     font-size: 2.5rem;
   }
+  .wrapper__text .heading-one {
+    margin-bottom: 1em;
+    font-size: 3.5em;
+  }
+  .wrapper__text .description {
+    font-size: 1.3rem;
+  }
+  .wrapper__price-promo {
+    font-size: 2.3rem;
+  }
   .wrapper__price-normal {
-    font-size: 2rem;
+    font: size 1.8rem;
   }
   .wrapper {
     width: 50%;
   }
   .wrapper__button {
-    margin-top: 3em;
+    margin-top: 1em;
+  }
+  .wrapper__button:hover {
+    background-color: rgb(20, 73, 20);
+    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */
